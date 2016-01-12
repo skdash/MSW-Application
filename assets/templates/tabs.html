@@ -1,0 +1,83 @@
+<div ng-controller="TabController">
+    <div class="jumbotron">
+        <h1 align="center">MSW Management Plan</h1>
+        <hr />
+        <uib-tabset>
+            <uib-tab heading="Domestic and Commercial">
+                <div class="container">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li ng-class="getTabClass(1)" ng-click="setActiveTab(1)" class="active"><a href="#collectionsystem">Collection system</a></li>
+                                    <li ng-class="getTabClass(2)" ng-click="setActiveTab(2)"><a href="#wastetransfer">Waste transfer</a></li>
+                                    <li ng-class="getTabClass(3)" ng-click="setActiveTab(3)"><a href="#treatment">Treatment</a></li>
+                                    <li ng-class="getTabClass(4)" ng-click="setActiveTab(4)"><a href="#disposal">Disposal</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="tabbable tabs-left">
+                                <div class="tab-content">
+                                    <div class="row" ng-class="getTabPaneClass(1)" id="collectionsystem">
+                                        <div class="col-md-3"></div>
+                                        <div class="col-md-3">
+                                            <p>Door to Door - 60%</p>
+                                            <p>Push cart/wheel barrow- </p>
+                                            <p>Tricycles/Ghanta gadis - </p>
+                                            <p>Auto tippers - </p>
+                                            <p>Tipper trucks - </p>
+                                            <p>Tractors - </p>
+                                            <div class="wrapper">
+                                                <button type="submit" class="btn btn-primary btn-lg" align='center' ng-click="createmodal()">Route map - collection system
+                                                </button>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="col-md-3"> 
+                                            <p>Bin system - 40%</p>
+                                            <p>1.5 m3 - </p>
+                                            <p>3.0 m3 - </p>
+                                            <p>4.5 m3 - </p>
+                                            
+                                        </div>
+                                        <br>
+                                              
+                                    </div>                        
+                    
+                                    <div class="row" ng-class="getTabPaneClass(2)" id="wastetransfer">
+                                        <div class="col-md-2"></div>
+                                        <div class="col-md-2"> 
+                                            <p>Compactors - </p>
+                                            <p>Dumper placers - </p>
+                                            
+                                        </div>
+                                        <div class="col-md-6"> 
+                                            <img src="/images/baltimore.jpg" style="width:1880px;height:500px;"> 
+                                        </div>     
+                                    </div>
+                                    <div ng-class="getTabPaneClass(3)" id="treatment">     
+                                        {{tab3}}
+                                    </div>
+                                    <div ng-class="getTabPaneClass(4)" id="disposal">     
+                                        <div class="col-md-3">                                            
+                                            <div class="wrapper">
+                                                <button type="submit" class="btn btn-primary btn-lg" align='center' ng-click="createmodal()">Generate Project Timeline
+                                                </button>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>      
+                                </div>
+                            </div>                            
+                            
+                            <div class="clearfix visible-lg"></div>
+                        </div>
+                        
+                </div>
+    
+            </uib-tab>
+            <uib-tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disable="tab.disabled">
+                {{tab.content}}
+            </uib-tab>
+        </uib-tabset>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<div ng-controller="InputController">
+	<div class="modal-header">
+  		<h3 class="modal-title">Data Required from ULB</h3>
+	</div>
+	<div class="modal-body">  	
+    	<input type="text" placeholder="Name of Town" autofocus="" class="form-control"/>
+    	<input type="text" placeholder="Area under Municipality / Corporation in sq.km." class="form-control"/>
+    	<input type="text" placeholder="Any extended areas/ recently added areas" required="" class="form-control"/>
+    	<input type="text" placeholder="Number of House Holds" required="" class="form-control"/>
+    	<input type="text" placeholder="Population" onfocus="(this.type='date')" class="form-control"/>
+    	<input type="text" placeholder="Number of Wards" class="form-control"/>
+    	<input type="number" placeholder="Base Map of the municipality with Road Network/Ward Boundaries demarcated" class="form-control"/>
+
+    	<input type="text" placeholder="Floating Population details (if any)" autofocus="" class="form-control"/>
+    	<p>Details of Existing infrastructure<p/>
+    	<input type="text" placeholder="Road Length in KM" required="" class="form-control"/>
+    	<input type="text" placeholder="Storm Water Network in Km (% covered & No of Wards Covered with details)" required="" class="form-control"/>
+    	<input type="text" placeholder="Sewerage System (% covered & No of Wards Covered with details)" onfocus="(this.type='date')" class="form-control"/>
+    	<input type="text" placeholder="Water Supply (% covered & No of Wards Covered with details)" class="form-control"/>
+    	<input type="number" placeholder="Base Map of the municipality with Road Network and Ward Boundaries demarcated" class="form-control"/>
+
+    	<input type="text" placeholder="Name of Town" autofocus="" class="form-control"/>
+    	<input type="text" placeholder="Area under Municipality / Corporation in sq.km." class="form-control"/>
+    	<input type="text" placeholder="Any extended areas/ recently added areas" required="" class="form-control"/>
+    	<input type="text" placeholder="Number of House Holds" required="" class="form-control"/>
+    	<input type="text" placeholder="Population" onfocus="(this.type='date')" class="form-control"/>
+    	<input type="text" placeholder="Number of Wards" class="form-control"/>
+    	<input type="number" placeholder="Base Map of the municipality with Road Network and Ward Boundaries demarcated" class="form-control"/>
+	</div>
+	<div class="modal-footer">
+		<button ng-click="submit()" class="btn btn-info">Submit</button>
+    	<button ng-click="cancel()" class="btn btn-warning">Cancel</button>
+	</div>
+</div>
