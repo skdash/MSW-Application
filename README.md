@@ -1,1 +1,1 @@
-# Todo Application in Angular.js + Sails.js
+Live Plunker (https://plnkr.co/edit/46iSZEhxlUjjvyxBhuk9?p=preview)
